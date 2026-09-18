@@ -103,6 +103,11 @@ const methods = [
   [BookOpenCheck, '전 과목 DB', 'SAT·ACT·AP·IB 자료와 자체 프로그램을 활용합니다.'],
 ] as const;
 
+const waybridgeSites = [
+  { name: 'Waybridge', description: 'way-bridge.com', href: 'https://way-bridge.com/' },
+  { name: 'Waybridge Consulting', description: '미국·캐나다 유학 컨설팅', href: 'https://www.waybridgeconsulting.com/' },
+] as const;
+
 export default function Home() {
   return (
     <main>
@@ -159,6 +164,14 @@ export default function Home() {
               <a className="primary-button" href="#dat-results">DAT 성과 <ArrowUpRight size={16} /></a>
               <a className="primary-button" href="#class">SAT · AP 성과 <ArrowUpRight size={16} /></a>
               <a className="primary-button" href="#results">합격 리스트 보기 <ArrowUpRight size={16} /></a>
+            </div>
+            <div className="hero-site-links" role="group" aria-label="Waybridge 사이트 바로가기">
+              {waybridgeSites.map((site) => (
+                <a key={site.href} href={site.href} target="_blank" rel="noopener noreferrer" aria-label={`${site.name} — ${site.description} (새 탭에서 열기)`}>
+                  <span><strong>{site.name}</strong><small>{site.description}</small></span>
+                  <ArrowUpRight size={17} aria-hidden="true" />
+                </a>
+              ))}
             </div>
           </div>
 
@@ -367,6 +380,13 @@ export default function Home() {
         <div className="shell contact-inner">
           <div><p>DAT · SAT · AP &amp; ADMISSIONS</p><h2>시험 준비부터<br />미국 대학·치대 진학까지.</h2></div>
           <a className="contact-status" href="tel:01080333896">DAT · SAT · AP 수업 상담 <Phone size={19} /></a>
+        </div>
+        <div className="shell contact-site-links" role="group" aria-label="Waybridge 관련 사이트">
+          {waybridgeSites.map((site) => (
+            <a key={site.href} href={site.href} target="_blank" rel="noopener noreferrer" aria-label={`${site.name} (새 탭에서 열기)`}>
+              {site.name}<ArrowUpRight size={15} aria-hidden="true" />
+            </a>
+          ))}
         </div>
       </section>
 
