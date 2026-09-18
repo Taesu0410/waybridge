@@ -139,7 +139,8 @@ nav a:hover { color: var(--white); }
 .primary-button { display: inline-flex; align-items: center; gap: 9px; margin-top: 20px; padding: 11px 15px; border: 1px solid rgba(255,255,255,.18); border-radius: 10px; background: linear-gradient(135deg, #57baff, #1979d5); color: var(--white); box-shadow: 0 14px 30px rgba(0,94,186,.26); font-size: 11px; font-weight: 850; transition: transform .2s ease, box-shadow .2s ease; }
 .primary-button:hover { transform: translateY(-2px); box-shadow: 0 20px 38px rgba(0,94,186,.36); }
 .hero-photo { --portrait-height: 390px; position: relative; width: 100%; max-width: 420px; height: var(--portrait-height); min-height: 0; overflow: hidden; align-self: end; justify-self: center; margin: 0 0 18px; }
-.hero-photo img { position: absolute; top: -8%; left: 50%; transform: translateX(-50%); width: auto; max-width: none; height: 168%; display: block; filter: drop-shadow(0 22px 22px rgba(0,0,0,.32)); }
+/* Straighten the original portrait without changing facial details or the source asset. */
+.hero-photo img { position: absolute; top: -8%; left: 50%; transform: translateX(-50%) rotate(6deg); transform-origin: 50% 50%; width: auto; max-width: none; height: 168%; display: block; filter: drop-shadow(0 22px 22px rgba(0,0,0,.32)); }
 .hero-proof { grid-column: 1 / -1; display: grid; grid-template-columns: 1.45fr repeat(3, 1fr); gap: 1px; overflow: hidden; border: 1px solid rgba(255,255,255,.13); border-radius: 18px; background: rgba(255,255,255,.12); box-shadow: 0 24px 60px rgba(0,0,0,.16); backdrop-filter: blur(16px); }
 .hero-proof div { position: relative; min-height: 82px; display: flex; flex-direction: column; justify-content: center; padding: 15px 20px; border-right: 1px solid rgba(255,255,255,.11); background: rgba(5,27,57,.64); }
 .hero-proof div::before { content: ""; position: absolute; top: 0; left: 22px; width: 34px; height: 3px; background: var(--mint); }
