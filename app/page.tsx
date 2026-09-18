@@ -13,7 +13,7 @@ const cumulativeAdmissions = [
   ['Harvard', 'Computer Science', '1'],
   ['MIT', 'Chemical Engineering · Mathematics', '2'],
   ['Dartmouth', 'Government', '1'],
-  ['UPenn', 'Computer Science', '1'],
+  ['UPenn', 'Computer Science 1명 · College of Arts & Sciences 2명', '3'],
   ['NYU', 'Dental ×2 · Stern · Undecided', '4'],
   ['UDM', '7-year Dental Program', '2'],
   ['UoP', '7-year Dental Program', '1'],
@@ -22,6 +22,8 @@ const cumulativeAdmissions = [
   ['Michigan', 'Physiology', '1'],
   ['UCLA', 'Computer Science', '1'],
 ];
+
+const cumulativeAdmissionsTotal = cumulativeAdmissions.reduce((total, [, , count]) => total + Number(count), 0);
 
 const professionalAdmissions = [
   ['Columbia University', 'College of Dental Medicine', 'D.D.S.', 'Class of 2029'],
@@ -256,7 +258,7 @@ export default function Home() {
           </div>
 
           <div className="result-stats">
-            <div><strong>16</strong><span>누적 주요 대학 입학생</span></div>
+            <div><strong>{cumulativeAdmissionsTotal}</strong><span>누적 주요 대학 입학생</span></div>
             <div><strong>50+</strong><span>학생 누적 AP 5점</span></div>
             <div><strong>{undergraduate2026Total}</strong><span>2026 학부 결과</span></div>
             <div><strong>4</strong><span>Dental / Professional</span></div>
@@ -282,7 +284,7 @@ export default function Home() {
           <div className="results-columns">
             <div className="result-group">
               <div className="group-heading inline-heading">
-                <div><p>CUMULATIVE</p><h3>주요 대학 입학 · 16명</h3></div>
+                <div><p>CUMULATIVE</p><h3>주요 대학 입학 · {cumulativeAdmissionsTotal}명</h3></div>
                 <span>학생 중복 없음</span>
               </div>
               <div className="dense-list">
