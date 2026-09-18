@@ -348,11 +348,11 @@ export default function Home() {
             <figure className="faith-verse">
               <blockquote>
                 <p lang="ko">두려워 말라 내가 너와 함께 함이니라<br />놀라지 말라 나는 네 하나님이 됨이니라</p>
-                <p className="faith-verse-english" lang="en">Fear thou not; for I am with thee:<br />be not dismayed; for I am thy God.</p>
+                <p className="faith-verse-english" lang="en">So do not fear, for I am with you; do not be dismayed, for I am your God. I will strengthen you and help you; I will uphold you with my righteous right hand.</p>
               </blockquote>
               <figcaption>
-                <span>이사야 41장 10절 · Isaiah 41:10</span>
-                <span><a href="https://www.bskorea.or.kr/bible/korbibReadpage.php?linkBible=BHANisa041010" target="_blank" rel="noreferrer">개역한글</a> · <a href="https://www.biblegateway.com/passage/?search=ISAIAH+41%3A10&amp;version=KJV" target="_blank" rel="noreferrer">KJV</a></span>
+                <span>이사야 41장 10절 · Isaiah 41:10, NIV</span>
+                <span><a href="https://www.bskorea.or.kr/bible/korbibReadpage.php?linkBible=BHANisa041010" target="_blank" rel="noreferrer">개역한글</a> · <a href="https://www.biblegateway.com/passage/?search=ISAIAH+41%3A10&amp;version=NIV" target="_blank" rel="noreferrer">NIV</a></span>
               </figcaption>
             </figure>
           </div>
