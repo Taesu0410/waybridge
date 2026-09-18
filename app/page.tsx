@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import {
   ArrowUpRight,
   BookOpenCheck,
@@ -116,25 +117,30 @@ export default function Home() {
         <nav aria-label="주요 메뉴">
           <a href="#dat-results">DAT</a>
           <a href="#class">SAT · AP</a>
-          <a href="#profile">소개</a>
+          <a className="nav-secondary" href="#profile">소개</a>
           <a href="#results">결과</a>
-          <a href="#class">수업</a>
+          <a className="nav-secondary" href="#class">수업</a>
           <a className="nav-cta" href="#contact">문의 <ArrowUpRight size={15} /></a>
         </nav>
       </header>
 
       <section className="hero" id="top">
-        <img
+        <Image
           className="hero-busan"
           src="/busan-gwangan-bridge.jpg"
           alt="마린시티에서 바라본 부산 광안대교 야경"
+          fill
+          sizes="100vw"
+          loading="eager"
         />
         <div className="hero-shade" aria-hidden="true" />
 
         <div className="hero-layout shell">
           <div className="hero-copy">
-            <p className="eyebrow">DAT · SAT · AP/IB · ACT</p>
-            <h1>Jay <span>Founder of Waybridge</span></h1>
+            <div className="hero-intro">
+              <p className="eyebrow">DAT · SAT · AP/IB · ACT</p>
+              <h1>Jay <span>Founder of Waybridge</span></h1>
+            </div>
             <p className="hero-specialty">DAT 전문 강사 / STEM Major &amp; 미국 치대 입시 컨설팅</p>
             <p className="hero-lead">University of Pennsylvania 치대 합격 · DAT AA 27 · SAT 1590 · 미국 입시 과외 및 컨설팅 6년째</p>
             <div className="credential-row" aria-label="핵심 이력">
@@ -152,7 +158,15 @@ export default function Home() {
           </div>
 
           <figure className="hero-photo">
-            <img src="/joo-taesu-cutout-cropped.png" alt="Jay, Founder of Waybridge" />
+            <Image
+              src="/joo-taesu-cutout-cropped.png"
+              alt="Jay, Founder of Waybridge"
+              width={520}
+              height={840}
+              sizes="(max-width: 680px) 190px, 420px"
+              loading="eager"
+              fetchPriority="high"
+            />
           </figure>
 
           <div className="hero-proof" aria-label="핵심 성과">
