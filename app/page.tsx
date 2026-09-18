@@ -30,16 +30,19 @@ const professionalAdmissions = [
   ['University of Pennsylvania', 'School of Dental Medicine', 'D.M.D.', 'Class of 2028 · 2024'],
 ];
 
+// 2026 U.S. News National Universities order: 6, 7, 15, 32, 36, 46, 88.
 const undergraduate2026 = [
   ['University of Chicago', 'Transfer Admission'],
-  ['University of Pennsylvania', 'College of Arts & Sciences ×2'],
-  ['Purdue University', 'Computer & Information Technology'],
-  ['University of Wisconsin–Madison', 'College of Letters & Science'],
+  ['University of Pennsylvania ×2', 'College of Arts & Sciences'],
   ['Columbia University', 'School of General Studies'],
-  ['New York University', 'Liberal Studies Core'],
+  ['New York University ×2', 'Liberal Studies Core · CAS Prehealth / Dental Track'],
+  ['University of Wisconsin–Madison', 'College of Letters & Science'],
+  ['Purdue University', 'Computer & Information Technology'],
   ['Rochester Institute of Technology', 'Electrical Engineering · Computer Engineering Option'],
-  ['New York University', 'CAS Prehealth / Dental Track'],
 ];
+
+// Owner-reported total; the school/program list above contains the supplied breakdown.
+const undergraduate2026Total = 10;
 
 const admissions2024to2025 = [
   'Harvard · Computer Science',
@@ -255,7 +258,7 @@ export default function Home() {
           <div className="result-stats">
             <div><strong>16</strong><span>누적 주요 대학 입학생</span></div>
             <div><strong>50+</strong><span>학생 누적 AP 5점</span></div>
-            <div><strong>9</strong><span>2026 학부 결과</span></div>
+            <div><strong>{undergraduate2026Total}</strong><span>2026 학부 결과</span></div>
             <div><strong>4</strong><span>Dental / Professional</span></div>
             <div><strong>13</strong><span>2024–2025 RESULT</span></div>
           </div>
@@ -291,8 +294,7 @@ export default function Home() {
 
             <div className="result-group">
               <div className="group-heading inline-heading">
-                <div><p>2026</p><h3>학부 합격 · 9건</h3></div>
-                <span>UPenn ×2 포함</span>
+                <div><p>2026</p><h3>학부 합격 · {undergraduate2026Total}건</h3></div>
               </div>
               <div className="dense-list">
                 {undergraduate2026.map(([school, program]) => (
