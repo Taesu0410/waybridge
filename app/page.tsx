@@ -121,15 +121,15 @@ export default function Home() {
 
       <header className="site-header">
         <a className="brand" href="#top" aria-label="Jay 페이지 맨 위로">
-          <span className="brand-mark">J</span>
-          <span>JAY</span>
+          <span className="brand-mark" aria-hidden="true">W.</span>
+          <span className="brand-wordmark">Waybridge<small>JAY · INSTRUCTOR &amp; FOUNDER</small></span>
         </a>
         <nav aria-label="주요 메뉴">
           <a href="#dat-results">DAT</a>
           <a href="#class">SAT · AP</a>
           <a className="nav-secondary" href="#profile">소개</a>
           <a href="#results">결과</a>
-          <a className="nav-secondary" href="#class">수업</a>
+          <a className="nav-secondary" href="#story">설립 이야기</a>
           <a className="nav-cta" href="#contact">문의 <ArrowUpRight size={15} /></a>
         </nav>
       </header>
@@ -185,6 +185,7 @@ export default function Home() {
               loading="eager"
               fetchPriority="high"
             />
+            <figcaption><span>JAY</span><span>FOUNDER OF WAYBRIDGE</span></figcaption>
           </figure>
 
           <div className="hero-proof" aria-label="핵심 성과">
@@ -248,6 +249,7 @@ export default function Home() {
               <li><Check size={15} /> Honors 어학원 · AP / SAT 강사</li>
             </ul>
             <div className="score-jump"><span>직접 경험한 SAT 상승</span><strong>1320 → 1570</strong><em>3개월</em></div>
+            <a className="story-jump" href="#story">Waybridge를 시작한 이야기 <ArrowUpRight size={16} aria-hidden="true" /></a>
           </article>
 
           <div className="method-stack">
@@ -261,6 +263,37 @@ export default function Home() {
             <p className="outcome-note">AP 4점 이상 · 교과 A− 이상을 꾸준히 달성</p>
           </div>
         </div>
+
+        <section className="founder-story" id="story" aria-labelledby="story-title">
+          <div className="story-heading">
+            <p className="card-kicker">WHY WAYBRIDGE</p>
+            <h2 id="story-title">제가 받았던 도움을,<br />다음 학생에게도.</h2>
+            <p>유학을 떠났던 학생이, 후배들의 길을 함께하는 사람이 되기까지.</p>
+          </div>
+          <div className="story-grid">
+            <article className="story-narrative" aria-labelledby="story-origin-title">
+              <h3 id="story-origin-title">Waybridge를 시작한 이유</h3>
+              <p>저는 중학교 때 지인의 소개로 유학원을 통해 처음 미국에 갔습니다. Kansas City 지역의 Bishop Miege에 다녔지만, 홈스테이 문제로 약 6개월 동안 마음고생을 했습니다. 낯선 곳에서 도움이 필요했을 때, 기대했던 도움을 받지 못한 시간이었습니다.</p>
+              <p>결국 부모님과 직접 학교를 알아보다 Maine School of Science and Mathematics를 만났습니다. 기숙사에서 생활하며 혼자 감당하던 어려움이 줄었고, 학교와 미국 생활에도 잘 적응할 수 있었습니다. <strong>학생에게 맞는 학교란 성적뿐 아니라 생활과 적응까지 함께 생각해야 한다는 것</strong>을 그때 배웠습니다.</p>
+              <p>대학 진학을 준비하며 다시 여러 유학원의 도움을 구했지만, 해야 할 일을 하나부터 열까지 직접 챙겨야 했습니다. 그 과정의 마지막에 만난 분이 지금의 Waybridge 헤드 컨설턴트인 윤유선 컨설턴트님입니다. 진학 준비에 실질적인 도움을 받았고, 여러 학교에 합격하며 깊은 신뢰를 쌓았습니다.</p>
+              <p>저는 후배들이 같은 어려움을 겪지 않았으면 했습니다. 제가 받았던 도움을 다음 학생들에게도 전하고 싶어 함께해 보자고 제안했습니다. <strong>도움을 받던 학생과 그 길을 함께했던 컨설턴트가 동료가 되어</strong>, 같은 뜻을 가진 사람들과 Waybridge를 만들었습니다.</p>
+              <p>크리스천으로서 이웃을 사랑하고 돌보는 가치를 제 일에서도 실천하고 싶습니다. 필요한 순간에 곁에서 함께 고민해 주는 사람, 학생 한 명 한 명의 가능성을 진심으로 응원하는 사람이 되겠습니다.</p>
+              <p className="story-signature">Jay · Founder of Waybridge</p>
+            </article>
+            <aside className="story-values" aria-labelledby="story-values-title">
+              <p className="card-kicker">OUR VALUES &amp; VISION</p>
+              <h3 id="story-values-title">입학 이후에도,<br />함께 성장하는 크루.</h3>
+              <p className="story-values-intro">학생을 서비스를 받는 고객으로만 보지 않습니다. 우리의 후배이자 친구, 앞으로 함께 성장할 크루의 일원으로 바라봅니다.</p>
+              <ul>
+                <li><h4>재능을 발견하고, 열정을 키웁니다.</h4><p>학생의 재능과 가능성을 함께 발견하고, 앞으로 어떤 삶을 살아가면 좋을지 꾸준히 이야기하며 방향과 비전을 찾아갑니다.</p></li>
+                <li><h4>계획 이후에도 함께합니다.</h4><p>길을 제시하고, 함께 의논하고, 함께 호흡합니다. 준비 과정을 꾸준히 살피며 상황이 달라지면 다음 계획도 함께 조정합니다.</p></li>
+                <li><h4>받은 도움을 다음 사람에게 전합니다.</h4><p>좋은 학교에 가는 것과 함께, 자신의 자리에서 최선을 다하고 다른 사람을 배려하는 사람으로 성장하기를 바랍니다.</p></li>
+              </ul>
+              <div className="story-vision"><h4>우리가 만들어 가고 싶은 공동체</h4><p>대학생활부터 치대·의대·법대, 박사과정과 MBA 등 다음 진로까지. 장기적으로는 미국에서의 취업과 생활 경험도 나누며, 먼저 경험한 사람이 후배에게 힘이 되어 주는 공동체를 만들고 싶습니다.</p></div>
+              <a href="https://www.waybridgeconsulting.com/" target="_blank" rel="noopener noreferrer" aria-label="Waybridge Consulting 알아보기 (새 탭에서 열기)">Waybridge Consulting 알아보기 <ArrowUpRight size={16} aria-hidden="true" /></a>
+            </aside>
+          </div>
+        </section>
       </section>
 
       <section className="results-section" id="results">
