@@ -29,7 +29,7 @@ const professionalAdmissions = [
   ['Columbia University', 'College of Dental Medicine', 'D.D.S.', 'Class of 2029'],
   ['University of Pennsylvania', 'School of Dental Medicine', 'D.M.D.', 'Class of 2030'],
   ['University of Southern California', 'Herman Ostrow School of Dentistry', 'D.D.S.', 'Class of 2030'],
-  ['University of Pennsylvania', 'School of Dental Medicine', 'D.M.D.', 'Class of 2028 · 2024'],
+  ['New York University', 'College of Dentistry', 'D.D.S.', 'Class of 2029 · 2030'],
 ];
 
 // 2026 U.S. News National Universities order: 6, 7, 15, 32, 36, 46, 88.
