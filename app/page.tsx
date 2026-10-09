@@ -185,6 +185,16 @@ export default function Home() {
               loading="eager"
               fetchPriority="high"
             />
+            <Image
+              className="portrait-face-light"
+              src="/joo-taesu-cutout-cropped.png"
+              alt=""
+              aria-hidden="true"
+              width={520}
+              height={840}
+              sizes="(max-width: 680px) 190px, 420px"
+              loading="eager"
+            />
             <figcaption><span>JAY</span><span>FOUNDER OF WAYBRIDGE</span></figcaption>
           </figure>
 

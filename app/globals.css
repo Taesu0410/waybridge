@@ -83,6 +83,8 @@ nav a:hover { color: var(--red); }
 .hero-photo::before { content: ""; position: absolute; z-index: 1; inset: 12px 12px 57px; border: 1px solid rgba(255,255,255,.15); pointer-events: none; }
 /* Anchor the off-center face in the original cutout, not the full image bounds. */
 .hero-photo img { position: absolute; top: -7%; left: 50%; width: auto; max-width: none; height: 168%; transform: translateX(-43%) rotate(3deg); transform-origin: 43% 23%; }
+/* Lift facial shadows using the same photo; never regenerate facial features. */
+.hero-photo .portrait-face-light { pointer-events: none; filter: brightness(1.15) contrast(.7); mask-image: radial-gradient(ellipse 16% 11% at 43% 24%, #000 55%, transparent 100%); }
 .hero-photo figcaption { position: absolute; inset: auto 0 0; z-index: 2; display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 48px; padding: 12px 21px; background: var(--ink); color: var(--white); }
 .hero-photo figcaption span:first-child { font: 19px/1 var(--serif); letter-spacing: .05em; }
 .hero-photo figcaption span:last-child { font-size: 8px; letter-spacing: .12em; color: #c4ccdb; }
